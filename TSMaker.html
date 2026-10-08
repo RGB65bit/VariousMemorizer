@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<!-- v1.0.1
+  1.0.1_styleタグを指定したかったんだけど、めんどくさいので後回しにした-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>タイムスタンプ整形器</title>
+</head>
+<body>
+  <h1>タイムスタンプ整形器</h1>
+  <p>
+    入力されたテキストを時間と内容に分割し、YouTubeのコメント欄に使用できる形式のタイムスタンプ用チャプターに変形します。<br>
+    <span style="color:red">"総経過秒数:内容"</span>の形で入力してください。<br>
+    総経過秒数に数字以外(少数、文字列、空白、空文字)が入っているものなどの、不正値は弾かれます。<br>
+    また、空行や、そもそもコロン（:）による分割がないものも不正判定となります。
+    エラー表記の実装を検討しています。
+  </p>
+  <h3>整形前テキスト</h3>
+  <textarea id="InputText" rows="20" cols="60"></textarea>
+  <button id="Do">変換する</button>
+  <h3>整形後タイムスタンプ</h3>
+  <textarea readonly id="OutputText" rows="20" cols="60"></textarea>
+  <script src="TSMWorker.js"></script>
+</body>
+</html>
