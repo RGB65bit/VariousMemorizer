@@ -1,5 +1,7 @@
-//v2.1.3
-//console出力をdebugレベルにし、CookedArrayをlet宣言ではなくconst宣言にした
+//v2.1.4
+//2.0.0_HTMLと連携する前提に変更。
+//2.1.3_console出力をdebugレベルにし、CookedArrayをlet宣言ではなくconst宣言にした
+//2.1.4_Transformerのconsoleがlogのママだったので修正
 function Cooker(Ingredient){
   const CookedArray = []
   const RawLength = Ingredient.length
@@ -37,7 +39,7 @@ function Transformer(Input){
     const TimeString = `${TimeHou}:${TimeMin}:${TimeSec}  ${Description}\n`
     OutputText = OutputText + TimeString
   }
-  console.log(OutputText)
+  console.debug(OutputText)
   return OutputText
 }
 function WorkerLoader(){
