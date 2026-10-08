@@ -1,6 +1,7 @@
-//v2.1.2
+//v2.1.3
+//console出力をdebugレベルにし、CookedArrayをlet宣言ではなくconst宣言にした
 function Cooker(Ingredient){
-  let CookedArray = []
+  const CookedArray = []
   const RawLength = Ingredient.length
   for(let x = 0; x < RawLength; x++){
     const Line = Ingredient[x]
@@ -21,7 +22,7 @@ function Cooker(Ingredient){
     const Obj = {time:LineTime, Description:LineDescription}
     CookedArray.push(Obj)
   }
-  console.dir(CookedArray)
+  console.debug(CookedArray)
   return CookedArray
 }
 function Transformer(Input){
